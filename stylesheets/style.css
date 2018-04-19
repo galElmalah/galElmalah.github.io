@@ -1,0 +1,163 @@
+:root {
+    --color-1: rgb(33,33,33);
+    --color-2: hsl(171, 100%, 41%);
+  }
+
+.container h1{
+    font-weight: 700;
+    font-size: 48px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: solid 3px var(--color-2);
+    margin-bottom: 5%;
+}
+
+.container h2{
+    font-weight: 500;
+    font-size: 32px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
+    margin-bottom: 3.5%;
+}
+
+.navbar{
+    border: none;
+    position:fixed !important;
+    top: 0;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    background: rgba(33, 33, 33, 0.476) !important;
+}
+
+section{
+    min-height: 100vh;
+}
+
+section p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.container{
+    width:90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.navbar-item{
+    text-transform: uppercase;
+}
+
+.navbar-item{
+    color: whitesmoke !important;
+    font-weight: 500;
+}
+
+a.navbar-item:hover{
+    color: var(--color-2) !important;
+    font-weight: 500;
+}
+
+.flex-container p{
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+/* pictures section */
+#resume{
+    display: flex;
+    align-items: center;
+ 
+}
+#resume::after{
+    content : "";
+    display: block;
+    position: absolute;
+    background-position: 60%;
+    background-attachment: fixed;
+    background-size: 130%;
+    top: 0;
+    left: 0;
+    background-image: url('/assets/images/first_pic_resume2.jpg');;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    opacity : 0.8;
+    z-index: -1;
+
+}
+
+
+#skills{
+    position: relative;
+}
+
+#skills::after{
+    content : "";
+    display: block;
+    position: absolute;
+    background-position-y: center;
+    top: 0;
+    left: 0;
+    background-image: url('/assets/images/skills.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    opacity : 0.6;
+    z-index: -1;
+    background-size: 130%;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
+/* colored sections*/
+
+.colored-section{
+    color: whitesmoke;
+}
+
+#about{
+    background: var(--color-1);
+}
+
+#projects{
+    background: var(--color-1);
+}
+
+/* Resume button */
+.button{
+    transition: 0.15s ease-in-out;
+}
+
+
+/* media quaries */
+@media only screen and (max-width: 1000px){
+    #resume::after{
+        background-size: 180%;
+    }
+    #skills::after{
+        background-size: 180%;
+    }
+}
+
+@media only screen and (max-width: 668px){
+    #resume::after{
+        background-size: 280%;
+    }
+    #skills::after{
+        background-size: 280%;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    #resume::after{
+        background-size: 340%;
+    }
+    #skills::after{
+        background-size: 320%;
+    }
+}
