@@ -44,7 +44,6 @@ h1, h2{
     outline: none;
     box-sizing: border-box;
     background: transparent !important;
-    transition: 0.2s ease-in-out;
     box-shadow: none !important;
 }
 /* adding the sliding bottom border */
@@ -59,9 +58,11 @@ h1, h2{
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
   }
-  .navbar:hover:after { 
-    width: 100%; 
-  }
+
+.navbar:hover:after { 
+width: 100%; 
+}
+
 
 
 section{
@@ -78,18 +79,30 @@ section p{
     padding-bottom: 5%;
 }
 
-.navbar-item{
+.navbar-item, .navbar-burger{
     text-transform: uppercase;
+    color: whitesmoke !important;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
 }
 
-.navbar-item{
-    color: whitesmoke !important;
-    font-weight: 500;
+.navbar-burger span{
+    border: solid 1px white;
 }
+/* nav for when you scroll to the bottom of the page */
+.lower-nav{
+    background: hsla(171, 100%, 41%, 0.7) !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; 
+}
+
 
 a.navbar-item:hover{
     color: var(--primary) !important;
-    font-weight: 500;
+}
+
+a.lower-nav-items:hover{
+    color: var(--color-1) !important;
 }
 
 .flex-container{
