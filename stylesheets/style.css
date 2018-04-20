@@ -1,131 +1,154 @@
 :root {
-    --color-1: rgb(33,33,33);
+    --color-1: rgb(33, 33, 33);
     --primary: hsl(171, 100%, 41%);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.github-link{
+.github-link {
     color: #bd2c00;
 }
 
-.github-link:hover{
+.github-link:hover {
     color: #dd3401;
 }
 
-.container h1{
+.container h1 {
     font-weight: 700;
     font-size: 48px;
     display: inline-block;
     border-bottom: solid 3px var(--primary);
     margin-bottom: 3%;
 }
-h1, h2{
+
+h1,
+h2 {
     text-transform: uppercase;
     border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
 }
 
-.container h2{
+.container h2 {
     font-weight: 500;
     font-size: 32px;
     display: inline-block;
     margin-bottom: 3.5%;
 }
 
-.navbar{
+.navbar {
     border: none;
-    position:fixed !important;
+    position: fixed !important;
     top: 0;
     width: 100%;
     outline: none;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: transparent !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out
 }
+
 /* adding the sliding bottom border */
+
 .navbar:after {
     content: '';
     display: block;
     border-bottom: solid 3px var(--primary);
-    width:0;
+    width: 0;
     position: absolute;
     top: 52px;
     left: 0;
     -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
     transition: 0.5s ease;
-  }
-
-.navbar:hover:after { 
-width: 100%; 
 }
 
+.navbar:hover:after {
+    width: 100%;
+}
 
-
-section{
+section {
     min-height: 100vh;
 }
 
-section p{
+section p {
     font-weight: 500;
     font-size: 1.2rem;
 }
-.container{
-    width:90%;
+
+.container {
+    width: 90%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.navbar-item, .navbar-burger{
+.navbar-item,
+.navbar-burger {
     text-transform: uppercase;
     color: whitesmoke !important;
     font-weight: 600;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 
-.navbar-burger span{
+.navbar-burger span {
     border: solid 1px white;
 }
+
 /* nav for when you scroll to the bottom of the page */
-.lower-nav{
-    background: hsla(171, 100%, 41%, 0.7) !important; /* fallback for old browsers */
+
+.lower-nav {
+    background: hsla(171, 100%, 41%, 0.7) !important;
+    /* fallback for old browsers */
     /* background: -webkit-linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important;  */ 
+    /* background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important;  */
 }
-.tag{
+
+.tag {
     margin-top: 10px;
     margin-right: 5px;
     min-width: 22%;
     background: transparent !important;
     color: whitesmoke !important;
-    border:solid 1px hsla(171, 100%, 41%, 0.641) !important;
+    border: solid 1px hsla(171, 100%, 41%, 0.641) !important;
 }
 
-a.navbar-item:hover{
+a.navbar-item:hover {
     color: var(--primary) !important;
 }
 
-a.lower-nav-items:hover{
+a.lower-nav-items:hover {
     color: var(--color-1) !important;
 }
 
-.flex-container{
+.flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
-.flex-container p{
+
+.flex-container p {
     margin: 0 auto;
     text-transform: uppercase;
 }
-.flex-container h1{
+
+.flex-container h1 {
     margin: 0 auto;
     margin-bottom: 0px;
     border-bottom: none;
 }
-.flex-container h3{
+
+.flex-container h3 {
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 500;
@@ -133,22 +156,28 @@ a.lower-nav-items:hover{
     margin-bottom: 5px;
 }
 
-
 /* pictures section */
-#resume{
+
+#resume {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: whitesmoke;
 }
 
-#resume h1{
+#resume h1 {
     text-transform: none;
 }
 
-
-#resume::after{
-    content : "";
+#resume::after {
+    content: "";
     display: block;
     position: absolute;
     background-position: 60%;
@@ -160,24 +189,25 @@ a.lower-nav-items:hover{
     background-attachment: fixed;
     width: 100%;
     height: 100%;
-    opacity : 0.8;
+    opacity: 0.8;
     z-index: -1;
 }
+
 /* resume button */
-.control a{
-    border: solid 3px white !important; 
+
+.control a {
+    border: solid 3px white !important;
     border-radius: none;
     color: whitesmoke !important;
 }
 
-
-#skills{
+#skills {
     position: relative;
     color: whitesmoke;
 }
 
-#skills::after{
-    content : "";
+#skills::after {
+    content: "";
     display: block;
     position: absolute;
     background-position-y: center;
@@ -187,103 +217,110 @@ a.lower-nav-items:hover{
     background-attachment: fixed;
     width: 100%;
     height: 100%;
-    opacity : 1;
+    opacity: 1;
     z-index: -1;
     background-size: 130%;
- 
 }
 
 /* colored sections*/
 
-.colored-section{
+.colored-section {
     color: whitesmoke;
 }
 
-#about{
+#about {
     min-height: 50vh;
     background: var(--color-1);
 }
 
-#projects{
+#projects {
     background: var(--color-1);
 }
 
-#contact{
+#contact {
     background: rgba(250, 248, 248, 0.621);
 }
-#contact-msg{
+
+#contact-msg {
     font-weight: 600;
     font-size: 1.4rem;
     margin-bottom: 15px;
 }
 
-footer{
+footer {
     height: 15vh;
-    background: var(--primary); /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--primary), #96c93d); /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--primary);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary), #96c93d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, var(--primary), #96c93d);
+    background: -o-linear-gradient(left, var(--primary), #96c93d);
     background: linear-gradient(to right, var(--primary), #96c93d);
-    margin-bottom: 0; 
+    margin-bottom: 0;
     text-align: center;
     padding-top: 3vh;
 }
 
-footer a{  
-    margin: 10px; 
+footer a {
+    margin: 10px;
     color: whitesmoke;
     font-size: 2em;
 }
 
-footer .container{
+footer .container {
     padding-top: 0;
     padding-bottom: 0;
 }
+
 /* Resume button */
-.button{
+
+.button {
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
     transition: 0.15s ease-in-out;
 }
 
-
 /* media quaries */
-@media only screen and (max-width: 1000px){
 
-    #resume::after{
+@media only screen and (max-width: 1000px) {
+    #resume::after {
         background-size: 180%;
     }
-    #skills::after{
+    #skills::after {
         background-size: 180%;
     }
 }
 
-@media only screen and (max-width: 668px){
-    #contact h1{
+@media only screen and (max-width: 668px) {
+    #contact h1 {
         font-size: 38px !important;
     }
-    #contact-msg{
+    #contact-msg {
         text-align: center;
         font-size: 1.2rem;
     }
-    .flex-container{
+    .flex-container {
         text-align: center;
     }
-    #resume::after{
-        background-size: 280%;
+    #resume::after {
+        background-size: cover;
     }
-    #skills::after{
-        background-size: 280%;
+    #skills::after {
+        background-size: cover;
     }
 }
 
-@media only screen and (max-width: 420px){
-    .tag{
-       min-width: 45%;
+@media only screen and (max-width: 420px) {
+    .tag {
+        min-width: 45%;
     }
-    .flex-container h3{
+    .flex-container h3 {
         font-size: 22px;
     }
-    #resume::after{
-        background-size: 340%;
+    #resume::after {
+        background-size: cover;
     }
-    #skills::after{
-        background-size: 320%;
+    #skills::after {
+        background-size: cover;
     }
 }
