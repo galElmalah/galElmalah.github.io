@@ -180,13 +180,13 @@ a.lower-nav-items:hover {
     content: "";
     display: block;
     position: absolute;
-    background-position: 60%;
-    background-attachment: fixed;
-    background-size: 130%;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
     top: 0;
     left: 0;
     background-image: url('/assets/images/first_pic_resume2.jpg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     width: 100%;
     height: 100%;
     opacity: 0.8;
@@ -210,7 +210,7 @@ a.lower-nav-items:hover {
     content: "";
     display: block;
     position: absolute;
-    background-position-y: center;
+    background-position: center;
     top: 0;
     left: 0;
     background-image: url('/assets/images/skills4.png');
@@ -219,7 +219,7 @@ a.lower-nav-items:hover {
     height: 100%;
     opacity: 1;
     z-index: -1;
-    background-size: 130%;
+    background-size: cover;
 }
 
 /* colored sections*/
@@ -281,16 +281,6 @@ footer .container {
 }
 
 /* media quaries */
-
-@media only screen and (max-width: 1000px) {
-    #resume::after {
-        background-size: 180%;
-    }
-    #skills::after {
-        background-size: 180%;
-    }
-}
-
 @media only screen and (max-width: 668px) {
     #contact h1 {
         font-size: 38px !important;
@@ -302,12 +292,6 @@ footer .container {
     .flex-container {
         text-align: center;
     }
-    #resume::after {
-        background-size: cover;
-    }
-    #skills::after {
-        background-size: cover;
-    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -317,10 +301,5 @@ footer .container {
     .flex-container h3 {
         font-size: 22px;
     }
-    #resume::after {
-        background-size: cover;
-    }
-    #skills::after {
-        background-size: cover;
-    }
+
 }
