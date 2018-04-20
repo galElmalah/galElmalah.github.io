@@ -146,6 +146,7 @@ a.lower-nav-items:hover{
     text-transform: none;
 }
 
+
 #resume::after{
     content : "";
     display: block;
