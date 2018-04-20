@@ -21,7 +21,7 @@ body{
     font-size: 48px;
     display: inline-block;
     border-bottom: solid 3px var(--primary);
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 h1, h2{
     text-transform: uppercase;
@@ -32,7 +32,6 @@ h1, h2{
     font-weight: 500;
     font-size: 32px;
     display: inline-block;
-    border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
     margin-bottom: 3.5%;
 }
 
@@ -45,6 +44,7 @@ h1, h2{
     box-sizing: border-box;
     background: transparent !important;
     box-shadow: none !important;
+    transition: 0.3s ease-in-out
 }
 /* adding the sliding bottom border */
 .navbar:after {
@@ -92,10 +92,17 @@ section p{
 /* nav for when you scroll to the bottom of the page */
 .lower-nav{
     background: hsla(171, 100%, 41%, 0.7) !important; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; 
+    /* background: -webkit-linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important;  */ 
 }
-
+.tag{
+    margin-top: 10px;
+    margin-right: 5px;
+    min-width: 22%;
+    background: transparent !important;
+    color: whitesmoke !important;
+    border:solid 1px hsla(171, 100%, 41%, 0.641) !important;
+}
 
 a.navbar-item:hover{
     color: var(--primary) !important;
@@ -134,6 +141,11 @@ a.lower-nav-items:hover{
     justify-content: center;
     color: whitesmoke;
 }
+
+#resume h1{
+    text-transform: none;
+}
+
 #resume::after{
     content : "";
     display: block;
@@ -187,6 +199,7 @@ a.lower-nav-items:hover{
 }
 
 #about{
+    min-height: 50vh;
     background: var(--color-1);
 }
 
@@ -260,6 +273,9 @@ footer .container{
 }
 
 @media only screen and (max-width: 420px){
+    .tag{
+       min-width: 45%;
+    }
     .flex-container h3{
         font-size: 22px;
     }
