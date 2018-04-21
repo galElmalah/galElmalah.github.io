@@ -161,8 +161,8 @@ a.lower-nav-items:hover {
 /* pictures section */
 
 #resume {
-    min-height: 100vh;
-    /* display: -webkit-box;
+    height:100vh;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
@@ -171,7 +171,7 @@ a.lower-nav-items:hover {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; */
+    justify-content: center;
     color: whitesmoke;
     margin-bottom: 0;
 }
@@ -195,8 +195,6 @@ a.lower-nav-items:hover {
     opacity: 0.8;
     z-index: -1;
 }
-
-/* resume button */
 
 .control a {
     border: solid 3px white !important;
@@ -227,6 +225,10 @@ a.lower-nav-items:hover {
 }
 
 /* colored sections*/
+
+/* #resume-button{
+    min-height: 10vh;
+} */
 
 .colored-section {
     color: whitesmoke;
@@ -290,6 +292,8 @@ footer .container {
 @media only screen and (max-width: 668px) {
     #resume::after, #skills::after{
         background-attachment: scroll;
+        /* FIX for the blank space caused by the 100vh and the address bar */
+        min-height: 112vh;
     }
     #contact h1 {
         font-size: 38px !important;
