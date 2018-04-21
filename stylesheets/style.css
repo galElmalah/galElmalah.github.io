@@ -8,6 +8,16 @@ body {
     padding: 0;
 }
 
+section{
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
+}
+
 .github-link {
     color: #bd2c00;
 }
@@ -24,11 +34,6 @@ body {
     margin-bottom: 3%;
 }
 
-h1,
-h2 {
-    text-transform: uppercase;
-    border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
-}
 
 .container h2 {
     font-weight: 500;
@@ -157,7 +162,7 @@ a.lower-nav-items:hover {
 
 #resume {
     min-height: 100vh;
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
@@ -166,8 +171,9 @@ a.lower-nav-items:hover {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center; */
     color: whitesmoke;
+    margin-bottom: 0;
 }
 
 #resume h1 {
@@ -179,12 +185,11 @@ a.lower-nav-items:hover {
     display: block;
     position: absolute;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     top: 0;
     left: 0;
     background-image: url('/assets/images/first_pic_resume2.jpg');
-    background-attachment: scroll;
     width: 100%;
     height: 100%;
     opacity: 0.8;
@@ -216,7 +221,7 @@ a.lower-nav-items:hover {
     background-attachment: fixed;
     width: 100%;
     height: 100%;
-    opacity: 1;
+    opacity: 0.8;
     z-index: -1;
     background-size: cover;
 }
@@ -228,7 +233,7 @@ a.lower-nav-items:hover {
 }
 
 #about {
-    min-height: 50vh;
+    min-height: 50%;
     background: var(--color-1);
 }
 
@@ -283,6 +288,9 @@ footer .container {
 
 /* media quaries */
 @media only screen and (max-width: 668px) {
+    #resume::after, #skills::after{
+        background-attachment: scroll;
+    }
     #contact h1 {
         font-size: 38px !important;
     }
