@@ -42,17 +42,20 @@
         <div class="field has-addons container flex-container animated fadeInDownBig">
             <h1>Gal Elmalah</h1>
             <h3>Software Engineering Student</h3>
-            <p class="control is-size-1-mobile">
-                <a class="button is-large is-primary is-outlined">
-                <span class="icon is-small">
-                    <i class="far fa-arrow-alt-circle-down"></i>
-                </span>
-                <span>Get my Resume</span>
-                </a>
-            </p>
         </div>   
+        <h1 id="arrow"><i class="fas fa-angle-double-down"></i></h1>
     </section>
 
+    <section id="resume-button-section">
+        <p class="control is-size-1-mobile">
+            <a class="button is-large is-black is-outlined" href="assets/Gal_Elmalah_CV.pdf" download>
+            <span class="icon is-small">
+                <i class="far fa-arrow-alt-circle-down"></i>
+            </span>
+            <span>Get my Resume</span>
+            </a>
+        </p>
+    </section>
 
     <section id="about" name="about" class="colored-section">
         <div class="container">
@@ -61,8 +64,13 @@
                 <div class="columns">  
                     <div class="column">                  
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae nam reiciendis ipsum. Delectus nam earum fugiat architecto natus omnis accusamus dolorum repellendus quod possimus. Doloremque fugit maxime ipsa recusandae iure!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nostrum id porro? Modi autem neque, assumenda placeat officia numquam adipisci enim? Earum quasi, omnis exercitationem aspernatur aut adipisci hic magnam. 
+                            Hi, i'm gal. Software engineering student in my second year from israel.<br>
+                            I'm, among other things, an eager and enthusiastic programmer that really enjoys anything web releated.<br><br>
+                            When i'm not using my kung fu cooding skills to save the universe, you can find me riding my mountaint bikes, running or just enjoying a good book.
+                            <!--
+                             *photo of me with my bike*
+                             *about learning and stufff*
+                            -->
                         </p>
                     </div>
                     <div class="column">
@@ -85,7 +93,7 @@
                     <div class="column">
                         <h2><i class="fas fa-code"></i> DEVELOPMENT</h2>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam enim cumque temporibus deleniti quibusdam optio blanditiis impedit. Animi, maiores fugiat. Saepe nemo modi molestias explicabo ex eum provident laboriosam ut.
+                            Here are some of the languages, frameworks and databases i have worked with.
                         </p>
                         <span class="tag is-large">JavaScript</span>
                         <span class="tag is-large">Node.js</span>
@@ -101,13 +109,14 @@
                 <div class="column">
                     <h2><i class="fas fa-cogs"> </i> tools</h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet et aut eligendi quos fugit possimus iste aliquid molestiae. Culpa quam suscipit doloribus voluptate ullam commodi quia nobis explicabo officiis neque!
+                        Here are some of the tools I use on a daily basis to manage, control, test and automate my code.
+                        <br>Basicly to make my life easier ;).
                     </p>
                     <span class="tag is-large">Git & GitHub</span>
                     <span class="tag is-large">Webpack</span>
                     <span class="tag is-large">Postman</span>
                     <span class="tag is-large">Npm scripts</span>
-                    <span class="tag is-large">Heroku</span>
+                    <!-- <span class="tag is-large">Heroku</span> -->
                 </div>
             </div>
             </article>
@@ -122,6 +131,7 @@
                         Here you can find some of my projects, but there is alot more on my <a class="github-link" href="https://github.com/galElmalah" target="blank">GitHub</a> account.
                     </p>
                     <!-- mount vue project component -->
+                    <div id="app"></div>
             </article>
         </div>
     </section>
@@ -148,7 +158,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="email" placeholder="Email input">
+                        <input class="input" type="email" placeholder="Email" required>
                         <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                         </span>

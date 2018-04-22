@@ -44,6 +44,8 @@ $("a").on('click', function(event) {
   } // End if
 });
 
+
+// navbar changing color on the bottom part
 window.addEventListener('scroll', ()=>{
   const contactHeight = document.getElementById('contact').offsetTop;  
   if(window.pageYOffset > contactHeight -50 ){
@@ -65,3 +67,14 @@ window.addEventListener('scroll', ()=>{
   }
   }
 });
+
+
+// adding click event to the arrow to scroll the user 50px down
+$("#arrow").on('click', function(event) {
+    event.preventDefault();
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(window).height()*0.15
+    }, 300)
+  });

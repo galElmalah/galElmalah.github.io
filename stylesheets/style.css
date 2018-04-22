@@ -60,7 +60,7 @@ h2 {
 
 /* adding the sliding bottom border */
 
-.navbar:after {
+.navbar::after {
     content: '';
     display: block;
     border-bottom: solid 3px var(--primary);
@@ -71,6 +71,7 @@ h2 {
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
     transition: 0.5s ease;
+    background: transparent;
 }
 
 .navbar:hover:after {
@@ -79,7 +80,7 @@ h2 {
 
 
 section p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.2rem;
 }
 
@@ -116,7 +117,7 @@ section p {
     margin-top: 10px;
     margin-right: 5px;
     min-width: 22%;
-    background: transparent !important;
+    background: hsla(171, 100%, 41%, 0.1) !important;
     color: whitesmoke !important;
     border: solid 1px hsla(171, 100%, 41%, 0.641) !important;
 }
@@ -172,14 +173,23 @@ a.lower-nav-items:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    align-items: center;
     color: whitesmoke;
     margin-bottom: 0;
 }
 
-#resume h1 {
-    text-transform: none;
+#resume #arrow{
+    font-size: 60px;
+    position: absolute;
+    bottom: 10px;
+    transition: 0.5s ease-in-out;
+    border-bottom: none;
 }
-
+#resume #arrow:hover{
+    font-size: 60px;
+    position: absolute;
+    bottom: -10px;
+}
 #resume::after {
     content: "";
     display: block;
@@ -226,12 +236,75 @@ a.lower-nav-items:hover {
 
 /* colored sections*/
 
-/* #resume-button{
-    min-height: 10vh;
-} */
+#resume-button-section{
+    width: 100%;
+    min-height: 15vh;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary), #96c93d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, var(--primary), #96c93d);
+    background: -o-linear-gradient(left, var(--primary), #96c93d);
+    background: linear-gradient(to right, var(--primary), #96c93d);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume-button-section:hover{
+    transition: 0.5s ease-in-out;
+    background-size: 200% 200%;
+    -webkit-animation: Gradient 2s ease forwards;
+	-moz-animation: Gradient 2s ease forwards;
+	animation: Gradient 2s ease forwards;
+}
+
+#resume-button-section a:hover{
+    transition: 0.3s ease-in-out;
+    background: var(--color-1) !important;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
 
 .colored-section {
     color: whitesmoke;
+    background: var(--color-1);
 }
 
 #about {
@@ -250,7 +323,6 @@ a.lower-nav-items:hover {
 }
 
 #contact-msg {
-    font-weight: 600;
     font-size: 1.4rem;
     margin-bottom: 15px;
 }
