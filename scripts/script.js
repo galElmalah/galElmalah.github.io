@@ -46,12 +46,14 @@ $("a").on('click', function(event) {
 
 
 // navbar changing color on the bottom part
+// and adding transition
 window.addEventListener('scroll', ()=>{
   const contactHeight = document.getElementById('contact').offsetTop;  
   if(window.pageYOffset > contactHeight -50 ){
     const navbar = document.getElementById('main-navigation');
     if(!navbar.classList.contains('lower-nav')){
       navbar.classList.add('lower-nav');
+      navbar.classList.add('transition');
       const items = document.getElementsByClassName('navbar-item');
       Array.from(items).forEach(item =>{
         item.classList.add('lower-nav-items')});
@@ -60,6 +62,7 @@ window.addEventListener('scroll', ()=>{
     const navbar = document.getElementById('main-navigation');
     if(navbar.classList.contains('lower-nav')){
       navbar.classList.remove('lower-nav');
+      setTimeout(()=>navbar.classList.remove('transition'),500);
       const items = document.getElementsByClassName('navbar-item');
       Array.from(items).forEach(item =>{
       item.classList.remove('lower-nav-items');
@@ -81,27 +84,22 @@ $("#arrow").on('click', function(event) {
     }, 300)
   });
 
-  // click event for the burger-menu 
-  const burgerButton = document.getElementById('burger-button');
-  burgerButton.addEventListener('click', (event)=> {
-    let isActive = burgerButton.classList.contains('is-active');
-    console.log(isActive);
-    const burgerMenu = document.getElementById('burger-menu');
-    const mainNav = document.getElementById('main-navigation');
-    if(isActive){
-      burgerMenu.classList.remove('is-invisible');
-      mainNav.classList.add('color-match');
-    } else {
-      burgerMenu.classList.add('is-invisible');
-      mainNav.classList.remove('color-match');
+  // click event for the burger-menu
+const mainNav = document.getElementById('main-navigation'); 
+const burgerMenu = document.getElementById('burger-menu');
+const burgerButton = document.getElementById('burger-button');
 
-    }
+burgerButton.addEventListener('click', ()=> {
+    burgerMenu.classList.toggle('is-invisible');
+    mainNav.classList.toggle('color-match');
 
-    // check if have the class area expend is true or false and act accordingly
+})
 
-    // get the burger menu element
-
-    // add the class that changes the opacity
-
-    // 
-  })
+burgerMenu.addEventListener('click', (event) => {
+  console.log(event.target.classList);
+  if(event.target.classList.contains('burger-menu-item')){
+      burgerMenu.classList.toggle('is-invisible');
+      mainNav.classList.toggle('color-match');
+      burgerButton.classList.remove('is-active');
+  }
+})
