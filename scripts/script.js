@@ -53,7 +53,6 @@ window.addEventListener('scroll', ()=>{
     const navbar = document.getElementById('main-navigation');
     if(!navbar.classList.contains('lower-nav')){
       navbar.classList.add('lower-nav');
-      navbar.classList.add('transition');
       const items = document.getElementsByClassName('navbar-item');
       Array.from(items).forEach(item =>{
         item.classList.add('lower-nav-items')});
@@ -62,7 +61,6 @@ window.addEventListener('scroll', ()=>{
     const navbar = document.getElementById('main-navigation');
     if(navbar.classList.contains('lower-nav')){
       navbar.classList.remove('lower-nav');
-      setTimeout(()=>navbar.classList.remove('transition'),500);
       const items = document.getElementsByClassName('navbar-item');
       Array.from(items).forEach(item =>{
       item.classList.remove('lower-nav-items');
@@ -90,7 +88,7 @@ const burgerMenu = document.getElementById('burger-menu');
 const burgerButton = document.getElementById('burger-button');
 
 burgerButton.addEventListener('click', ()=> {
-    burgerMenu.classList.toggle('is-invisible');
+    burgerMenu.classList.toggle('visibale');
     mainNav.classList.toggle('color-match');
 
 })
@@ -98,7 +96,7 @@ burgerButton.addEventListener('click', ()=> {
 burgerMenu.addEventListener('click', (event) => {
   console.log(event.target.classList);
   if(event.target.classList.contains('burger-menu-item')){
-      burgerMenu.classList.toggle('is-invisible');
+      burgerMenu.classList.toggle('visibale');
       mainNav.classList.toggle('color-match');
       burgerButton.classList.remove('is-active');
   }
