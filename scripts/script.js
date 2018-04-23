@@ -72,7 +72,7 @@ window.addEventListener('scroll', ()=>{
 // adding click event to the arrow to scroll the user 50px down
 $("#arrow").on('click', function(event) {
     event.preventDefault();
-    const FACTOR = $(window).height() > 900 ? 0.15 : 0.23;
+    const FACTOR = $(window).width() > 900 ? 0.15 : 0.23;
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
