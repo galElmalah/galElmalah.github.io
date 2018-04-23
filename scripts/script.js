@@ -88,14 +88,15 @@ const burgerMenu = document.getElementById('burger-menu');
 const burgerButton = document.getElementById('burger-button');
 
 burgerButton.addEventListener('click', ()=> {
+    document.body.classList.toggle('noScroll');
     burgerMenu.classList.toggle('visibale');
     mainNav.classList.toggle('color-match');
 
 })
 
 burgerMenu.addEventListener('click', (event) => {
-  console.log(event.target.classList);
   if(event.target.classList.contains('burger-menu-item')){
+      document.body.classList.toggle('noScroll');
       burgerMenu.classList.toggle('visibale');
       mainNav.classList.toggle('color-match');
       burgerButton.classList.remove('is-active');
