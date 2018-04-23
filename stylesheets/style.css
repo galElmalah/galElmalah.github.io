@@ -12,6 +12,11 @@ section{
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
+
 h1,
 h2 {
     text-transform: uppercase;
@@ -146,17 +151,20 @@ a.lower-nav-items:hover {
 }
 
 .flex-container h1 {
+    letter-spacing: 5px;
     margin: 0 auto;
     margin-bottom: 0px;
     border-bottom: none;
 }
 
 .flex-container h3 {
+    letter-spacing: 5px;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 28px;
     margin-bottom: 5px;
+    border-bottom: solid 2px whitesmoke;
 }
 
 /* pictures section */
@@ -206,6 +214,46 @@ a.lower-nav-items:hover {
     z-index: -1;
 }
 
+#resume-button-section{
+    width: 100%;
+    min-height: 15vh;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary), #96c93d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, var(--primary), #96c93d);
+    background: -o-linear-gradient(left, var(--primary), #96c93d);
+    background: linear-gradient(to right, var(--primary), #96c93d);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#resume-button-section:hover{
+    transition: 0.5s ease-in-out;
+    background-size: 200% 200%;
+    -webkit-animation: Gradient 2s ease infinite;
+	-moz-animation: Gradient 2s ease infinite;
+	animation: Gradient 2s ease infinite;
+}
+
+#resume-button-section h1{
+    text-decoration: none;
+    border-bottom: none;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 28px;
+    transition: 0.3s ease-in-out;
+}
+#resume-button-section h1:hover{
+    font-size: 32px;
+    letter-spacing: 10px;
+}
+
+
 .control a {
     border: solid 3px white !important;
     border-radius: none;
@@ -236,41 +284,13 @@ a.lower-nav-items:hover {
 
 /* colored sections*/
 
-#resume-button-section{
-    width: 100%;
-    min-height: 15vh;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--primary), #96c93d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(left, var(--primary), #96c93d);
-    background: -o-linear-gradient(left, var(--primary), #96c93d);
-    background: linear-gradient(to right, var(--primary), #96c93d);
-    background-size: 100% 100%;
-    transition: 0.5s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#resume-button-section:hover{
-    transition: 0.5s ease-in-out;
-    background-size: 200% 200%;
-    -webkit-animation: Gradient 2s ease forwards;
-	-moz-animation: Gradient 2s ease forwards;
-	animation: Gradient 2s ease forwards;
-}
-
-#resume-button-section a:hover{
-    transition: 0.3s ease-in-out;
-    background: var(--color-1) !important;
-}
 
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0% 50%
 	}
 	50% {
-		background-position: 100% 50%
+        background-position: 100% 50%
 	}
 	100% {
 		background-position: 0% 50%
@@ -317,6 +337,31 @@ a.lower-nav-items:hover {
     background: var(--color-1);
 }
 
+#projects h3{
+    margin-top: 40px;
+    font-size:28px;
+    color: whitesmoke;
+}
+.project-button {
+    margin-top:10px;
+    min-width: 20%;
+}
+
+.card{
+    border-bottom: 3px solid var(--primary);
+    border-top: 3px solid var(--primary);
+    width: 60%;
+    background-color: rgba(250, 248, 248, 0.950) !important;
+}
+.card-content .tag{
+    min-width: 5%;
+    background: var(--primary) !important;
+}
+
+
+
+
+
 #contact {
     min-height: 100vh;
     background: rgba(250, 248, 248, 0.621);
@@ -362,6 +407,12 @@ footer .container {
 
 /* media quaries */
 @media only screen and (max-width: 668px) {
+    .card{
+        width: 100%;
+    }
+    .project-button {
+        min-width: 40%;
+    }
     #resume::after, #skills::after{
         background-attachment: scroll;
         /* FIX for the blank space caused by the 100vh and the address bar */
