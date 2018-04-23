@@ -79,7 +79,7 @@ h2 {
 #burger-menu{
     opacity: 0;
     position: absolute;
-    top: 52px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -97,7 +97,6 @@ h2 {
 
 .visibale{
     opacity: 1 !important;
-    transition: 0.1s linear !important;
 }
 
 #burger-menu .navbar-item:hover{
@@ -147,7 +146,7 @@ section p {
 
 .color-match{
     transition: none;
-    background-color: hsla(171, 100%, 41%, 0.95) !important;
+    background-color: transparent !important;
 }
 
 .tag {
