@@ -12,11 +12,6 @@ section{
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
-
-
 h1,
 h2 {
     text-transform: uppercase;
@@ -83,10 +78,35 @@ h2 {
     width: 100%;
 }
 
+#burger-menu{
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(171, 100%, 41%, 0.9);
+    margin:0 auto;
+    font-size: 36px;
+    padding-top: 5vh; 
+    padding-bottom: 5vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#burger-menu .navbar-item:hover{
+    color: var(--color-1) !important;    
+}
+#burger-menu .navbar-item{
+    margin-top: 8vh;
+    transition: none;
+}
+
 
 section p {
     font-weight: 400;
     font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
 .container {
@@ -107,6 +127,11 @@ section p {
 
 .navbar-burger span {
     border: solid 1px white;
+}
+
+.color-match{
+    transition: none;
+    background-color: hsla(171, 100%, 41%, 0.9) !important;
 }
 
 /* nav for when you scroll to the bottom of the page */
@@ -186,14 +211,15 @@ a.lower-nav-items:hover {
     margin-bottom: 0;
 }
 
-#resume #arrow{
+#resume #arrow {
     font-size: 60px;
     position: absolute;
     bottom: 10px;
     transition: 0.5s ease-in-out;
     border-bottom: none;
+    cursor: pointer;
 }
-#resume #arrow:hover{
+#resume #arrow:hover {
     font-size: 60px;
     position: absolute;
     bottom: -10px;
@@ -214,15 +240,15 @@ a.lower-nav-items:hover {
     z-index: -1;
 }
 
-#resume-button-section{
+#resume-button-section {
     width: 100%;
     min-height: 15vh;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--primary), #96c93d);
+    background: -webkit-linear-gradient(to bottom, var(--primary), #96c93d);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(left, var(--primary), #96c93d);
-    background: -o-linear-gradient(left, var(--primary), #96c93d);
-    background: linear-gradient(to right, var(--primary), #96c93d);
+    background: -webkit-linear-gradient(to bottom , var(--primary), #96c93d);
+    background: -o-linear-gradient(to bottom, var(--primary), #96c93d);
+    background: linear-gradient(to bottom, var(--primary), #96c93d);
     background-size: 100% 100%;
     transition: 0.5s ease-in-out;
     display: flex;
@@ -280,45 +306,6 @@ a.lower-nav-items:hover {
     opacity: 0.8;
     z-index: -1;
     background-size: cover;
-}
-
-/* colored sections*/
-
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-        background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
 }
 
 
@@ -449,5 +436,44 @@ footer .container {
         font-size: 18px;
         font-weight: 400;
     }
+}
 
+
+/* Animations*/
+
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+        background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }

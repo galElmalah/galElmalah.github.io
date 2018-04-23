@@ -162,5 +162,5 @@ new Vue({
       techs:['node','js','express','blabla']
     }]
   },
-  el:'#app',
+  el:'#project-view',
 })

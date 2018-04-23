@@ -80,3 +80,28 @@ $("#arrow").on('click', function(event) {
       scrollTop: $(window).height()*FACTOR
     }, 300)
   });
+
+  // click event for the burger-menu 
+  const burgerButton = document.getElementById('burger-button');
+  burgerButton.addEventListener('click', (event)=> {
+    let isActive = burgerButton.classList.contains('is-active');
+    console.log(isActive);
+    const burgerMenu = document.getElementById('burger-menu');
+    const mainNav = document.getElementById('main-navigation');
+    if(isActive){
+      burgerMenu.classList.remove('is-invisible');
+      mainNav.classList.add('color-match');
+    } else {
+      burgerMenu.classList.add('is-invisible');
+      mainNav.classList.remove('color-match');
+
+    }
+
+    // check if have the class area expend is true or false and act accordingly
+
+    // get the burger menu element
+
+    // add the class that changes the opacity
+
+    // 
+  })

@@ -30,11 +30,25 @@
                 contact me
             </a>
       
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <a role="button" id="burger-button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
+            <div id="burger-menu" class="is-invisible">
+                <a class="navbar-item burger-menu-item" href="#about">
+                    about
+                </a>
+                <a class="navbar-item burger-menu-item" href="#skills">
+                    skills & tools
+                </a>
+                <a class="navbar-item burger-menu-item" href="#projects">
+                    projects
+                </a>
+                <a class="navbar-item burger-menu-item" href="#contact">
+                    contact me
+                </a>
+            </div>
         </div>
     </nav>
     
@@ -127,7 +141,7 @@
                         Here you can find some of my projects, but there is alot more on my <a class="github-link" href="https://github.com/galElmalah" target="blank">GitHub</a> account.
                     </p>
                     <!-- mount vue project component -->
-                    <div id="app"></div>
+                    <div id="project-view"></div>
             </article>
         </div>
     </section>
