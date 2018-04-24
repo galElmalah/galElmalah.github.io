@@ -88,7 +88,8 @@ const burgerMenu = document.getElementById('burger-menu');
 const burgerButton = document.getElementById('burger-button');
 
 burgerButton.addEventListener('click', ()=> {
-    document.body.classList.toggle('noScroll');
+    //need to fix the disabled scroll action
+    // document.body.classList.toggle('noScroll');
     burgerMenu.classList.toggle('visibale');
     mainNav.classList.toggle('color-match');
 
@@ -96,7 +97,8 @@ burgerButton.addEventListener('click', ()=> {
 
 burgerMenu.addEventListener('click', (event) => {
   if(event.target.classList.contains('burger-menu-item')){
-      document.body.classList.toggle('noScroll');
+    //need to fix the disabled scroll action before toggling this class
+      // document.body.classList.toggle('noScroll');
       burgerMenu.classList.toggle('visibale');
       mainNav.classList.toggle('color-match');
       burgerButton.classList.remove('is-active');
