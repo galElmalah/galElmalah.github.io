@@ -23,13 +23,6 @@ h2 {
     border-bottom: solid 3px hsla(171, 100%, 41%, 0.641);
 }
 
-.github-link {
-    color: #bd2c00;
-}
-
-.github-link:hover {
-    color: #dd3401;
-}
 
 .container h1 {
     font-weight: 700;
@@ -64,7 +57,7 @@ h2 {
 }
 
 .navbar-scroll{
-    background: var(--color-1) !important;
+    background: rgba(33, 33, 33, 0.95) !important;
 }
 
 .navbar::after {
@@ -101,7 +94,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     z-index: -1;
-    transition: visibility 0.3s, opacity 0.3s linear;
+    transition: visibility 0.2s, opacity 0.2s linear;
 
 }
 
@@ -155,14 +148,10 @@ section p {
     background: transparent !important;
 }
 
-
 /* nav for when you scroll to the bottom of the page */
 
 .lower-nav {
-    background: hsla(171, 100%, 41%, 0.7) !important;
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important; /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, hsla(171, 100%, 41%, 0.7), hsla(82, 56%, 51%, 0.7)) !important;  */
+    background: hsla(171, 100%, 41%, 0.9) !important;
 }
 
 .color-match{
@@ -222,7 +211,7 @@ a.lower-nav-items:hover {
 /* pictures section */
 
 #intro {
-    background: var(--primary);
+    background: transparent;
     height:100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,7 +241,7 @@ a.lower-nav-items:hover {
     position: absolute;
     bottom: -10px;
 }
-#intro::after {
+#intro:after {
     content: "";
     display: block;
     position: absolute;
@@ -261,7 +250,7 @@ a.lower-nav-items:hover {
     background-size: cover;
     top: 0;
     left: 0;
-    background-image: url('/assets/images/first_pic_intro2.jpg');
+    background-image: url('/assets/images/first_pic_resume22.jpg');
     width: 100%;
     height: 100%;
     opacity: 0.8;
@@ -351,7 +340,6 @@ a.lower-nav-items:hover {
 .card{
     border-bottom: 3px solid var(--primary);
     border-top: 3px solid var(--primary);
-    width: 60%;
     background-color: rgba(250, 248, 248, 0.950) !important;
 }
 .card-content .tag{
@@ -453,45 +441,39 @@ footer .container {
     }
 }
 
+/* Vue image slider */
+.image-slider img{
+    display: block;
+    margin: 0 auto;
+}
 
+p.icons{
+    height: 100%;
+    padding: 3vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p.icons a{
+    color: var(--primary);
+}
+
+p.icons a:hover{
+    opacity: 0.8;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
 /* Animations*/
 
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-        background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
 
 /* 
 @-webkit-keyframes burger-menu {

@@ -79,6 +79,8 @@ window.addEventListener('scroll', ()=>{
 
 // adding click event to the arrow to scroll the user 50px down
 $("#arrow").on('click', function(event) {
+  const contactHeight = document.getElementById('intro').offsetTop;
+  if(window.pageYOffset < contactHeight+1){
     event.preventDefault();
     const FACTOR = $(window).width() > 900 ? 0.15 : 0.23;
     // Using jQuery's animate() method to add smooth page scroll
@@ -87,6 +89,7 @@ $("#arrow").on('click', function(event) {
 
       scrollTop: $(window).height()*FACTOR
     }, 300)
+  }
   });
 
   // click event for the burger-menu

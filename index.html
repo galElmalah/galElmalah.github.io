@@ -14,7 +14,7 @@
 <body>
     <nav id="main-navigation"class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="#intro">
+            <a class="navbar-item is-hidden-touch" href="#intro">
                 Gal Elmalah
             </a>
             <a class="navbar-item is-hidden-touch" href="#about">
@@ -30,13 +30,14 @@
                 contact me
             </a>
       
-            <div role="button" id="burger-button" class="navbar-burger is-large" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+            <div role="button" id="burger-button" class="navbar-burger " aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
             </div>
-            <div id="burger-menu">
-                <a class="navbar-item burger-menu-item" href="#about">
+            
+            <div id="burger-menu">           
+                <a class="navbar-item burger-menu-item" href="#intro">
                     intro
                 </a>
                 <a class="navbar-item burger-menu-item" href="#about">
@@ -77,11 +78,13 @@
                 <div class="columns">  
                     <div class="column">                  
                         <p>
-                            I'm a second year student studying software engineering from israel.<br>
-                            I'm, among other things, an eager and enthusiastic programmer that really enjoys anything web releated.<br><br>
-                            
-                            When i'm not using my kung fu cooding skills to save the universe, you can find me riding my mountaint bikes, running or just enjoying a good book.
-                            <!--
+                            My name is Gal and I am currently in my second year of studying software engineering in the start-up capital of the world, Israel.
+                            <br>
+                            <br>
+                            I am passionate about all things relating to web development, from using the latest technologies, to implementing coding ‘best practices’ and user experience optimisation, to design and develop cutting edge websites.
+                            <br>
+                            <br>                                
+                            When I’m not using my kung Fu coding skills to save the universe, you can find me riding my mountain bikes, running or just enjoying a good book.                             <!--
                              *photo of me with my bike*
                              *about learning and stufff*
                             -->
@@ -217,6 +220,8 @@
                  <small>&copy;Gal Elmalah 2018 </small>
         </div>
     </footer>
+
+
     <script src="scripts/jquery.js"></script>
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
