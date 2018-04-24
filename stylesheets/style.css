@@ -63,6 +63,10 @@ h2 {
     transition: 0.3s ease-in-out
 }
 
+.navbar-scroll{
+    background: var(--color-1) !important;
+}
+
 .navbar::after {
     content: '';
     display: block;
@@ -77,7 +81,7 @@ h2 {
     background: transparent;
 }
 
-.navbar:hover:after {
+.navbar:hover::after {
     width: 100%;
 }
 
@@ -217,7 +221,8 @@ a.lower-nav-items:hover {
 
 /* pictures section */
 
-#resume {
+#intro {
+    background: var(--primary);
     height:100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -234,7 +239,7 @@ a.lower-nav-items:hover {
     margin-bottom: 0;
 }
 
-#resume #arrow {
+#intro #arrow {
     font-size: 60px;
     position: absolute;
     bottom: 10px;
@@ -242,12 +247,12 @@ a.lower-nav-items:hover {
     border-bottom: none;
     cursor: pointer;
 }
-#resume #arrow:hover {
+#intro #arrow:hover {
     font-size: 60px;
     position: absolute;
     bottom: -10px;
 }
-#resume::after {
+#intro::after {
     content: "";
     display: block;
     position: absolute;
@@ -256,7 +261,7 @@ a.lower-nav-items:hover {
     background-size: cover;
     top: 0;
     left: 0;
-    background-image: url('/assets/images/first_pic_resume2.jpg');
+    background-image: url('/assets/images/first_pic_intro2.jpg');
     width: 100%;
     height: 100%;
     opacity: 0.8;
@@ -267,25 +272,10 @@ a.lower-nav-items:hover {
     width: 100%;
     min-height: 15vh;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, var(--primary), #96c93d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to bottom , var(--primary), #96c93d);
-    background: -o-linear-gradient(to bottom, var(--primary), #96c93d);
-    background: linear-gradient(to bottom, var(--primary), #96c93d);
-    background-size: 100% 100%;
-    transition: 0.5s ease-in-out;
+    background: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-#resume-button-section:hover{
-    transition: 0.5s ease-in-out;
-    background-size: 200% 200%;
-    -webkit-animation: Gradient 2s ease infinite;
-	-moz-animation: Gradient 2s ease infinite;
-	animation: Gradient 2s ease infinite;
 }
 
 #resume-button-section h1{
@@ -435,7 +425,7 @@ footer .container {
     .project-button {
         min-width: 40%;
     }
-    #resume::after, #skills::after{
+    #intro::after, #skills::after{
         background-attachment: scroll;
         /* FIX for the blank space caused by the 100vh and the address bar */
         min-height: 112vh;

@@ -49,8 +49,16 @@ $("a").on('click', function(event) {
 // and adding transition
 window.addEventListener('scroll', ()=>{
   const contactHeight = document.getElementById('contact').offsetTop;  
-  if(window.pageYOffset > contactHeight -50 ){
-    const navbar = document.getElementById('main-navigation');
+  const windowYOffset = window.pageYOffset;
+  const navbar = document.getElementById('main-navigation');
+  console.log(windowYOffset);
+  if(windowYOffset > 100){
+    navbar.classList.add('navbar-scroll')
+  } else {
+    navbar.classList.remove('navbar-scroll')
+
+  }
+  if(windowYOffset > contactHeight -50 ){
     if(!navbar.classList.contains('lower-nav')){
       navbar.classList.add('lower-nav');
       const items = document.getElementsByClassName('navbar-item');
@@ -58,7 +66,6 @@ window.addEventListener('scroll', ()=>{
         item.classList.add('lower-nav-items')});
     }
   } else {
-    const navbar = document.getElementById('main-navigation');
     if(navbar.classList.contains('lower-nav')){
       navbar.classList.remove('lower-nav');
       const items = document.getElementsByClassName('navbar-item');
