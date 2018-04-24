@@ -333,9 +333,10 @@ a.lower-nav-items:hover {
 
 
 .colored-section {
-    color: whitesmoke;
+    color: whitesmoke !important;
     background: var(--color-1);
 }
+
 
 #about {
     min-height: 50%;
