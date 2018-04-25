@@ -110,10 +110,16 @@ new Vue({
       Also i have implemnted an express-session based authentiction system that hashed all users password and stroe them securly blablabla need to refactor
       `,
       images: [{
-        src: '../assets/images/blogContent.png',
+        src: '../assets/images/blogSystem/ready/blogContent.jpg',
       }, {
-        src: '../assets/images/adminState.jpg',
-      },
+        src: '../assets/images/blogSystem/ready/blogPost.jpg',
+      }, {
+        src: '../assets/images/blogSystem/ready/LoginScreen.jpg',
+      }, {
+        src: '../assets/images/blogSystem/ready/newPosts.jpg',
+      }, {
+        src: '../assets/images/blogSystem/ready/mobile.jpg',
+      }
     ],
       links:{
         github:'https://github.com/galElmalah/blog',
@@ -123,7 +129,7 @@ new Vue({
     },
     {
       title:'Personal Website',
-      description: `My personal website.
+      description: `My personal website. I used Vue.js 2 to automate some of the components rendering and a custom script to load the images.
       `,
       images: [{
         src: '../assets/images/personalWebsite/ready/pwebsite.jpg',

@@ -397,6 +397,10 @@ footer .container {
 
 /* media quaries */
 @media only screen and (max-width: 668px) {
+    .card-image {
+        min-height: 155px;;
+    }
+
     .navbar:hover:after {
         width: 0;
     }
