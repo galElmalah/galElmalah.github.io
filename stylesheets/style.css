@@ -228,18 +228,19 @@ a.lower-nav-items:hover {
     margin-bottom: 0;
 }
 
-#intro #arrow {
-    font-size: 60px;
+#intro img{
+    height: 60px;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     transition: 0.5s ease-in-out;
     border-bottom: none;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
-#intro #arrow:hover {
-    font-size: 60px;
+#intro img:hover {
     position: absolute;
-    bottom: -10px;
+    bottom: 0px;
 }
 #intro:after {
     content: "";
