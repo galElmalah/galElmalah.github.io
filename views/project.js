@@ -8,7 +8,6 @@ Vue.component('project-view', {
       <div class="card-image">
         <image-slider :images="images"></image-slider>
       </div>
-      <hr>
       <project-links-tray :links="links"/>
       <div class="card-content">
         <div class="content" v-html="description">
@@ -40,7 +39,7 @@ Vue.component('image-slider', {
                  :src="images[index].src"
                  />
         </div>
-      </transition-group>
+        </transition-group>
         </div>
           `,
   props: ['images'],
@@ -127,10 +126,16 @@ new Vue({
       description: `My personal website.
       `,
       images: [{
-        src: '../assets/images/blogContent.png',
+        src: '../assets/images/personalWebsite/ready/pwebsite.jpg',
       }, {
-        src: '../assets/images/adminState.jpg',
-      },
+        src: '../assets/images/personalWebsite/ready/pwebsite_ptoject.jpg',
+      }, {
+        src: '../assets/images/personalWebsite/ready/pwebsite_getintouch.jpg',
+      }, {
+        src: '../assets/images/personalWebsite/ready/mobilewebsite.jpg',
+      }, {
+        src: '../assets/images/personalWebsite/ready/mobile_menu.jpg',
+      }
     ],
       links:{
         github:'',

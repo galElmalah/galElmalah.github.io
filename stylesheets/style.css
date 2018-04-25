@@ -328,7 +328,7 @@ a.lower-nav-items:hover {
 }
 
 #projects h3{
-    margin-top: 40px;
+    margin-top: 100px;
     font-size:28px;
     color: whitesmoke;
 }
@@ -347,10 +347,13 @@ a.lower-nav-items:hover {
     background: var(--primary) !important;
 }
 
-
+.card-image {
+    overflow: hidden;
+    min-height:636px;
+    border-bottom: var(--color-1) 10px solid;
+}
 
 #contact {
-    min-height: 100vh;
     background: rgba(250, 248, 248, 0.621);
 }
 
@@ -467,9 +470,11 @@ p.icons a:hover{
 }
 
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+    position: absolute;
+    transition: all .5s;
 }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(100px);
     opacity: 0;
 }
 /* Animations*/
