@@ -83,7 +83,6 @@ Vue.component('project-links-tray', {
   props:['links']
 })
 
-
 Vue.component('tags-tray', {
   template:`
     <div>
@@ -105,22 +104,10 @@ new Vue({
     projects: [{
       title:'Blog System',
       description: `Personal blog system that I have built to gain some experience with the MEAN stack.<br>
-      This web bloging system lets an admin ( pref-defined )
-      to manage a blog ( creating/deleting/editing ) posts.<br>
-      Also i have implemnted an express-session based authentiction system that hashed all users password and stroe them securly blablabla need to refactor
+      This web bloging system lets an admin ( pre-defined )
+      to manage a blog ( creating/deleting/editing ) posts.
       `,
-      images: [{
-        src: '../assets/images/blogSystem/ready/blogContent.jpg',
-      }, {
-        src: '../assets/images/blogSystem/ready/blogPost.jpg',
-      }, {
-        src: '../assets/images/blogSystem/ready/LoginScreen.jpg',
-      }, {
-        src: '../assets/images/blogSystem/ready/newPosts.jpg',
-      }, {
-        src: '../assets/images/blogSystem/ready/mobile.jpg',
-      }
-    ],
+      images: [{"src":"../assets/images/blogSystem/ready/LoginScreen.jpg"},{"src":"../assets/images/blogSystem/ready/blogContent.jpg"},{"src":"../assets/images/blogSystem/ready/blogPost.jpg"},{"src":"../assets/images/blogSystem/ready/mobile.jpg"},{"src":"../assets/images/blogSystem/ready/newPosts.jpg"}],
       links:{
         github:'https://github.com/galElmalah/blog',
         demo:'https://app-blog-gal.herokuapp.com/'
@@ -132,15 +119,15 @@ new Vue({
       description: `My personal website. I used Vue.js 2 to automate some of the components rendering and a custom script to load the images.
       `,
       images: [{
-        src: '../assets/images/personalWebsite/ready/pwebsite.jpg',
+        "src": '../assets/images/personalWebsite/ready/pwebsite.jpg',
       }, {
-        src: '../assets/images/personalWebsite/ready/pwebsite_ptoject.jpg',
+        "src": '../assets/images/personalWebsite/ready/pwebsite_ptoject.jpg',
       }, {
-        src: '../assets/images/personalWebsite/ready/pwebsite_getintouch.jpg',
+        "src": '../assets/images/personalWebsite/ready/pwebsite_getintouch.jpg',
       }, {
-        src: '../assets/images/personalWebsite/ready/mobilewebsite.jpg',
+        "src": '../assets/images/personalWebsite/ready/mobilewebsite.jpg',
       }, {
-        src: '../assets/images/personalWebsite/ready/mobile_menu.jpg',
+        "src": '../assets/images/personalWebsite/ready/mobile_menu.jpg',
       }
     ],
       links:{

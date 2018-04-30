@@ -14,7 +14,8 @@ body.noScroll {
 }
 
 section{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 h1,
@@ -90,10 +91,19 @@ h2 {
     margin:0 auto;
     font-size: 36px;
     padding-bottom: 5vh; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: -1;
+    -webkit-transition: visibility 0.2s, opacity 0.2s linear;
+    -o-transition: visibility 0.2s, opacity 0.2s linear;
     transition: visibility 0.2s, opacity 0.2s linear;
 
 }
@@ -109,6 +119,8 @@ h2 {
 }
 #burger-menu .navbar-item{
     margin-top: 8vh;
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
 }
 
@@ -121,8 +133,8 @@ section p {
 
 .container {
     width: 90%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .navbar-item,
@@ -155,6 +167,8 @@ section p {
 }
 
 .color-match{
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
     background-color: transparent !important;
 }
@@ -223,7 +237,9 @@ a.lower-nav-items:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: whitesmoke;
     margin-bottom: 0;
 }
@@ -232,6 +248,8 @@ a.lower-nav-items:hover {
     height: 60px;
     position: absolute;
     bottom: 20px;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     border-bottom: none;
     cursor: pointer;
@@ -263,9 +281,15 @@ a.lower-nav-items:hover {
     min-height: 15vh;
     /* fallback for old browsers */
     background: var(--primary);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #resume-button-section h1{
@@ -275,6 +299,8 @@ a.lower-nav-items:hover {
     letter-spacing: 5px;
     font-weight: 500;
     font-size: 28px;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 #resume-button-section h1:hover{
@@ -351,6 +377,7 @@ a.lower-nav-items:hover {
 .card-image {
     overflow: hidden;
     min-height:636px;
+    background: var(--color-1);
     border-bottom: var(--color-1) 10px solid;
 }
 
@@ -371,6 +398,7 @@ footer {
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(left, var(--primary), #96c93d);
     background: -o-linear-gradient(left, var(--primary), #96c93d);
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary)), to(#96c93d));
     background: linear-gradient(to right, var(--primary), #96c93d);
     margin-bottom: 0;
     text-align: center;
@@ -462,68 +490,39 @@ p.icons{
     width: 100%;
     text-align: center;
     font-size: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 p.icons a{
     color: var(--primary);
+    -webkit-transition: scale, 0.2s;
+    -o-transition: scale, 0.2s;
+    transition: scale, 0.2s;
 }
 
 p.icons a:hover{
     opacity: 0.8;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .fade-enter-active, .fade-leave-active {
     position: absolute;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+            transform: translateX(100px);
     opacity: 0;
 }
-/* Animations*/
-
-
-/* 
-@-webkit-keyframes burger-menu {
-	0% {
-        right: 0;
-		width: 0;
-	}
-	50% {
-        width:50%
-	}
-	100%{
-        right: 100vw;
-		width: 100%
-	}
-}
-
-@-moz-keyframes burger-menu {
-	0% {
-        right: 0;
-		width: 0;
-	}
-	50% {
-        width:50%
-	}
-	100%{
-        right: 100vw;
-		width: 100%
-	}
-}
-
-@keyframes burger-menu {
-	0% {
-        right: 0;
-		width: 0;
-	}
-	50% {
-        width:50%
-	}
-	100%{
-        right: 100vw;
-		width: 100%
-	}
-} */

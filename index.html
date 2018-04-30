@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/dist/styleMinify.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link rel="stylesheet"
@@ -111,9 +111,7 @@
                 <div class="columns">
                     <div class="column">
                         <h2><i class="fas fa-code"></i> DEVELOPMENT</h2>
-                        <p>
-                            some of the languages, frameworks and databases I have worked with.
-                        </p>
+                        <br>
                         <span class="tag is-large">JavaScript(ES6)</span>
                         <span class="tag is-large">Node.js</span>
                         <span class="tag is-large">Express.js</span>
@@ -127,10 +125,7 @@
                      </div>
                 <div class="column">
                     <h2><i class="fas fa-cogs"> </i> tools</h2>
-                    <p>
-                        Here are some of the tools I use on a daily basis to manage, control, test and automate my code.
-                        <br>Basicly to make my life easier ;).
-                    </p>
+                    <br>
                     <span class="tag is-large">Git & GitHub</span>
                     <span class="tag is-large">Webpack</span>
                     <span class="tag is-large">Postman</span>
@@ -163,11 +158,13 @@
                 <p id="contact-msg">
                     Have a sweet project in mind or just want to say hi?<br> Feel free to send me a message!
                 </p>
+                <p><strong style="color: red">Currently under development!</strong></p>
                 <!-- start of contact form -->
+                <form id="contact-form">
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="text" placeholder="Name">
+                        <input class="input" type="text" placeholder="Name" required name="name">
                         <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                         </span>
@@ -177,7 +174,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="email" placeholder="Email" required>
+                        <input class="input" type="email" placeholder="Email" required name="email">
                         <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                         </span>
@@ -187,7 +184,7 @@
                 <div class="field">
                     <label class="label">Subject</label>
                     <div class="control has-icons-left">
-                        <input class="input" type="text" placeholder="Subject">
+                        <input class="input" type="text" placeholder="Subject" required name="subject">
                         <span class="icon is-small is-left">
                             <i class="fas fa-question"></i>
                         </span>
@@ -197,12 +194,13 @@
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                        <textarea class="textarea" placeholder="Textarea" required name="body"></textarea>
                     </div>
                 </div>
 
-                <button class="button is-primary is-outlined">Submit</button>
+                <button class="button is-primary is-outlined" type="submit">Submit</button>
                 <!-- end of contact form -->
+                </form>
             </article>
         </div>
     </section>
@@ -225,9 +223,9 @@
 
 
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/dist/bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="views/project.js"></script>
+    <script src="views/dist/bundle.js"></script>
 
 </body>
 </html>

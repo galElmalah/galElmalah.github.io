@@ -1,0 +1,1 @@
+[{"src":"../assets/images/personalWebsite/ready/mobile_menu.jpg"},{"src":"../assets/images/personalWebsite/ready/mobilewebsite.jpg"},{"src":"../assets/images/personalWebsite/ready/pwebsite.jpg"},{"src":"../assets/images/personalWebsite/ready/pwebsite_getintouch.jpg"},{"src":"../assets/images/personalWebsite/ready/pwebsite_ptoject.jpg"}]

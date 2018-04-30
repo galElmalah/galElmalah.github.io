@@ -1,0 +1,24 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galElmalah/galElmalah.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galElmalah/galElmalah.github.io/issues"
+  },
+  "homepage": "https://github.com/galElmalah/galElmalah.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
