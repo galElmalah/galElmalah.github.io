@@ -34,6 +34,7 @@ $("a").on('click', function(event) {
 
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    console.log($(hash).offset().top);
     $('html, body').animate({
       scrollTop: $(hash).offset().top
     }, 800, function(){
@@ -51,7 +52,6 @@ window.addEventListener('scroll', ()=>{
   const contactHeight = document.getElementById('contact').offsetTop;  
   const windowYOffset = window.pageYOffset;
   const navbar = document.getElementById('main-navigation');
-  console.log(windowYOffset);
   if(windowYOffset > 100){
     navbar.classList.add('navbar-scroll')
   } else {
