@@ -349,6 +349,11 @@ a.lower-nav-items:hover {
     background: var(--color-1);
 }
 
+#about img{
+    position: relative;
+    bottom: 150px;
+}
+
 #projects {
     min-height: 100vh;
     background: var(--color-1);
@@ -380,6 +385,8 @@ a.lower-nav-items:hover {
     background: var(--color-1);
     border-bottom: var(--color-1) 10px solid;
 }
+
+
 
 #contact {
     background: rgba(250, 248, 248, 0.621);
@@ -425,7 +432,17 @@ footer .container {
 }
 
 /* media quaries */
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 1100px) {
+    #about img{
+        position: inherit;
+        top: 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #about img{
+        position: inherit;
+        top: 0;
+    }
     .card-image {
         min-height: 155px;;
     }
